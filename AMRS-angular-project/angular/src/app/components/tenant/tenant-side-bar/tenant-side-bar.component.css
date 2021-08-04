@@ -18,18 +18,18 @@ body {
     margin: 0 auto;
   }
   
-  #header {
+  /* #header {
     padding: 1.5em;
     margin: 0 0 1em 0;
     background-color: rgb(78, 132, 177);
-  }
+  } */
   
-  #footer {
+  /* #footer {
     padding: 1.5em;
     margin: 2em 0 0 0;
     background-color: rgb(68, 177, 144);
   
-  }
+  } */
   
   
   /* Menu Styles */
@@ -37,10 +37,14 @@ body {
   .primary-nav {
       position: fixed;
       z-index: 999;
+      
+      
+
   }
   
   .menu {
       position: relative;
+      box-shadow: 2px 2px 1px 1px #000;
   }
   
   .menu ul {
@@ -50,11 +54,12 @@ body {
       
   }
   
-  .open-panel {
+  
+  /* .open-panel {
     border: none;
     background-color:rgb(175, 223, 43);
     padding: 0;
-  }
+  } */
   
   .hamburger {
       /* background: rgb(42, 62, 243); */
@@ -69,6 +74,7 @@ body {
       top: 0;
       z-index: 1000;
       cursor: pointer;
+      border-top-right-radius: 5px;
   }
   
   .hamburger:before {
@@ -216,6 +222,8 @@ body {
     /* background-color: #1E90FF; */
       background: rgb(42, 62, 243);
       z-index: 999;
+      height: 1000px;
+      border-radius: 5px;
   }
   
   .menu-dropdown {
@@ -243,6 +251,7 @@ body {
     color: #000;
     font-size: 21px;
     padding: 10px;
+    
   }
   
   .menu a.logotype span {
@@ -365,3 +374,14 @@ body {
       line-height: 1.5;
       font-weight: 300;
   }
+  
+
+  
+  
+  
+ 
+  
+  
+  
+  
+  

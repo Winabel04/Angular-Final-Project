@@ -1,17 +1,56 @@
 <!-- <p>assign works!</p> -->
 
 <app-admin-side-bar></app-admin-side-bar>
-<div class="w3-flat-clouds w3-display-container" style="margin-left:20%;min-height:80vh;" id="assignDiv"
-    name="commonDivName">
-    <div style="width:90%;margin:0 auto;">
-        <div class="w3-white">
+<div class="w3-clouds w3-display-container divNisya" style="margin-left:5.7%;height:80vh;" id="infoDiv" name="commonDivName">
+    <div class="w3-display-middle" style="width:70%;">
+        <div class="w3-white" style="box-shadow: 0px 1px 2px 2px black;">
             <header class="w3-container w3-flat-belize-hole">
-                <h2 class="fontSourceSansPro w3-text-white">Assign Work</h2>
+                <h2 class="fontSourceSansPro w3-text-white">Notification/Assign<span id="userName"></span></h2>
             </header>
-            <div class="w3-container fontSourceSansPro">
-                <form class="w3-margin-top" id="assignForm" method='get' action='/generateWork'>
-                </form>
+            <br>
+            <div class="w3-container w3-padding-16 w3-center">
+                <div class=" w3-container" style="margin:5px auto;width:50%;">
+                    <table id="table" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Employee Number</th>
+                                <th>Work</th>
+                                <th>Name</th>
+                                <th>Phone Number</th>
+                                <th>Email</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <!-- <?php
+                            $attendance_qry = $conn->query("SELECT a.*,concat(e.firstname,' ',e.middlename,' ',e.lastname) as name, e.employee_no FROM `attendance` a inner join employee e on a.employee_no = e.employee_no ");
+                            while($row = $attendance_qry->fetch_array()){
+                                
+                        ?>	 -->
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td><></td>
+                                <!-- <?php 
+                                if($row['log_type'] ==1){
+                                    $log = "TIME IN";
+                                }elseif($row['log_type'] ==2){
+                                    $log = "TIME OUT";
+                                }
+                            
+                                ?> -->
+                                <td><></td>
+                                <td><></td>
+                                <td><center></center></td>
+                            </tr>
+                        <!-- <?php
+                            }
+                        ?>	 -->
+                        </tbody>
+                    </table>
+                </div>
             </div>
+           
         </div>
     </div>
 </div>

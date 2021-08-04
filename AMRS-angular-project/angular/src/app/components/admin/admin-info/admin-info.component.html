@@ -1,85 +1,41 @@
-<!-- <p>info works!</p>
-<div class="container">
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Welcome {{info.status}}</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <tr><i class="fa fa-user-o" style="font-size:24px"></i></tr>
-                <tr><i class="fa fa-info-circle" style="font-size:24px"></i></tr>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td><i class="fa fa-user-o" style="font-size:24px"></i></td>
-                <td><i class="fa fa-info-circle" style="font-size:24px"></i></td>
-                <td>@fat</td>
-              </tr>
-        </tbody>
-    </table>
-</div>
 
-<div class="container">
-    <table class="table table-striped">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-      </table>
-</div> -->
 
 <app-admin-side-bar></app-admin-side-bar>
 
-<div class="w3-flat-clouds w3-display-container" style="margin-left:20%;height:80vh;" id="infoDiv" name="commonDivName">
+<div class="w3-clouds w3-display-container divNisya" style="margin-left:5.7%;height:80vh;" id="infoDiv" name="commonDivName">
     <div class="w3-display-middle" style="width:70%;">
-        <div class="w3-white ">
+        <div class="w3-white" style="box-shadow: 0px 2px 3px 3px black; ">
             <header class="w3-container w3-flat-belize-hole">
                 <h2 class="fontSourceSansPro w3-text-white">Welcome <span id="userName"></span>
                     <span id="changePass">
                         <h6 style="display:inline;"><button
                                 class="w3-btn w3-right w3-hover-blue w3-border-white w3-border" id="changeInfo"
-                                onclick="$('#changeInfoModal').css('display','block');">Change Info</button></h6>
+                                 routerLink="/adminChangeInfo">Change Info</button></h6>
                     </span>
                 </h2>
             </header>
+            <br>
             <div class="w3-container fontSourceSansPro">
                 <input id="admin_id" name="admin_id" value="" style="display:none;">
                 <h2><span class="fa fa-user-o w3-col m2 s4"></span></h2>
+                <br>
                 <h3><span id="actype" class="w3-rest"></span></h3>
+                <br>
                 <h2><span class="fa fa-envelope-o w3-col m2 s4"></span></h2>
+                <br>
                 <h3><span id="email" class="w3-rest"></span></h3>
+                <br>
                 <h2><span class="fa fa-phone w3-col m2 s4"></span></h2>
+                <br>
                 <h3><span id="mobile" class="w3-rest"></span></h3>
             </div>
         </div>
+        <br>
+        <br>
         <div class="w3-margin-top">
             <div class="w3-third w3-light-grey">
                 <header style="text-align: center;" class="fontSourceSansPro">
-                    <span class="w3-border-bottom w3-border-blue w3-tag w3-jumbo w3-flat-belize-hole w3-padding-large">
+                    <span class="w3-border-bottom w3-border-blue w3-tag w3-jumbo w3-flat-belize-hole w3-padding-large" style="box-shadow: 0px 2px 3px 3px black;">
                         <span id="complaintsRegistered">5</span>
                         <h5 style="padding:0;margin:0;">Registered</h5>
                     </span>
@@ -87,7 +43,7 @@
             </div>
             <div class="w3-third w3-light-grey">
                 <header style="text-align: center;" class="fontSourceSansPro">
-                    <span class="w3-border-bottom w3-border-blue w3-tag w3-jumbo w3-flat-belize-hole w3-padding-large">
+                    <span class="w3-border-bottom w3-border-blue w3-tag w3-jumbo w3-flat-belize-hole w3-padding-large" style="box-shadow: 0px 2px 3px 3px black;">
                         <span id="complaintsSolved">4</span>
                         <h5 style="padding:0;margin:0;">Completed</h5>
                     </span>
@@ -95,7 +51,7 @@
             </div>
             <div class="w3-third w3-light-grey">
                 <header style="text-align: center;" class="fontSourceSansPro">
-                    <span class="w3-border-bottom w3-border-blue w3-tag w3-jumbo w3-flat-belize-hole w3-padding-large">
+                    <span class="w3-border-bottom w3-border-blue w3-tag w3-jumbo w3-flat-belize-hole w3-padding-large" style="box-shadow: 0px 2px 3px 3px black;">
                         <span id="complaintsPending">1</span>
                         <h5 style="padding:0;margin:0;">Pending</h5>
                     </span>
@@ -107,7 +63,7 @@
 
 <!-- /////////////////////////////////////////// Change Info Modal ////////////////////////////////////////// -->
 
-<div id="changeInfoModal" class="w3-modal w3-card-4 w3-animate-zoom">
+<!-- <div id="changeInfoModal" class="w3-modal w3-card-4 w3-animate-zoom">
     <div class="w3-modal-content">
         <header class="w3-flat-belize-hole w3-container">
             <span onclick="closeChangeModal('changeInfoModal');"
@@ -136,4 +92,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->

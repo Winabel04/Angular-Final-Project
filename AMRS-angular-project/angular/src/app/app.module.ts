@@ -20,6 +20,8 @@ import { AdminHistoryComponent } from './components/admin/admin-history/admin-hi
 import { AdminInfoComponent } from './components/admin/admin-info/admin-info.component';
 import { AdminSideBarComponent } from './components/admin/admin-side-bar/admin-side-bar.component';
 import { TenantSideBarComponent } from './components/tenant/tenant-side-bar/tenant-side-bar.component';
+import { HandyManSideNavComponent } from './../app/components/handy-man/handy-man-side-nav/handy-man-side-nav.component';
+import { AdminChangeInfoComponent } from './components/admin/admin-info/admin-change-info/admin-change-info.component';
 
 
 
@@ -42,7 +44,9 @@ import { TenantSideBarComponent } from './components/tenant/tenant-side-bar/tena
     AdminHistoryComponent,
     AdminInfoComponent,
     AdminSideBarComponent,
-    TenantSideBarComponent
+    TenantSideBarComponent,
+    HandyManSideNavComponent,
+    AdminChangeInfoComponent,
   ],
   imports: [
     BrowserModule,
