@@ -63,7 +63,7 @@ body {
   
   .hamburger {
       /* background: rgb(42, 62, 243); */
-      background-color: #1E90FF;
+      background-color: #0061c2;
       position: relative;
       display: block;
       text-align: center;
@@ -161,7 +161,8 @@ body {
       width: 250px;
       transition: all 0.45s cubic-bezier(0.77, 0, 0.175, 1);
     /* background-color: #1E90FF; */
-      background: rgb(42, 62, 243);
+      /* background: rgb(42, 62, 243); */
+      background: linear-gradient(to bottom left, #003366 0%, #006699 100%);
       z-index: 999;
       height: 1000px;
       border-radius: 5px;

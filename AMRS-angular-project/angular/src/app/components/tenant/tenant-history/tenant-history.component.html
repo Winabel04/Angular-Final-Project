@@ -2,28 +2,55 @@
 
 <app-tenant-side-bar></app-tenant-side-bar>
 
-<div class="w3-flat-clouds w3-display-container" style="margin-left:20%;height:80vh;max-height:80vh;overflow-y: scroll;"
-    id="historyDiv" name="commonDivName">
-    <div class="w3-center" style="width:80%;margin:0 auto;">
-        <header class="w3-container w3-flat-belize-hole">
-            <h2 class="fontSourceSansPro w3-text-white">History
-                <span>
-                    <h2 style="display:inline;">
-                        <select class="fontSourceSansPro" style="background-color: #2980BB;color:white;border:0px"
-                            name="type" id="historySelectType"
-                            onchange="document.getElementById('historyButton').click();">
-                            <option value="-1">All</option>
-                            <option value="0">Lodged</option>
-                            <option value="1">Progress</option>
-                            <option value="2">Solved</option>
-                            <option value="3">Closed</option>
-                        </select>
-                    </h2>
-                </span>
-            </h2>
-        </header>
-    </div>
-    <div id="historyDivChild" style="width:80%;margin:0 auto;">
 
+<div class="w3-clouds w3-display-container divNisya" style="margin-left:5.7%;height:80vh;" id="infoDiv" name="commonDivName">
+    <div class="w3-display-middle" style="width:70%;">
+        <div class="w3-white" style="box-shadow: 0px 1px 2px 2px black;">
+            <header class="w3-container w3-flat-belize-hole">
+                <h2 class="fontSourceSansPro w3-text-white">History<span id="userName"></span></h2>
+            </header>
+            <br>
+            <div class="w3-container w3-padding-16 w3-center">
+                <table id="table" class="table table-borderedless table-striped">
+                    <thead>
+                        <tr>
+                            
+                            <th>Problem</th>
+                            <th>HandyMan</th>
+                            <th>Time</th>
+                           
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <?php
+                            $attendance_qry = $conn->query("SELECT a.*,concat(e.firstname,' ',e.middlename,' ',e.lastname) as name, e.employee_no FROM `attendance` a inner join employee e on a.employee_no = e.employee_no ");
+                            while($row = $attendance_qry->fetch_array()){
+                                
+                        ?>	 -->
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <!-- <?php 
+                                if($row['log_type'] ==1){
+                                    $log = "TIME IN";
+                                }elseif($row['log_type'] ==2){
+                                    $log = "TIME OUT";
+                                }
+                            
+                                ?> -->
+                         
+                            <!-- <td><input type="checkbox" name="assign" id="assign" class=""></td> -->
+                        </tr>
+                        <!-- <?php
+                            }
+                        ?>	 -->
+                    </tbody>
+                </table>
+                
+            </div>
+
+            
+        </div>
     </div>
 </div>

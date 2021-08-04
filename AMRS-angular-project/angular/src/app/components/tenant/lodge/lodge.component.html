@@ -9,42 +9,51 @@
         <div id="main-contents">
 
 
-            <div class="w3-flat-clouds w3-display-container" style="margin-left:20%;min-height:80vh;" id="lodgeDiv"
+            <div class="w3-clouds w3-display-container" style="margin-left:5.7%;min-height:100vh;" id="lodgeDiv"
                 name="commonDivName">
                 <div class="w3-display-middle" style="width:70%;">
-                    <div class="w3-white">
+                    <div class="w3-white" style="box-shadow: 0px 1px 2px 2px black; ">
                         <header class="w3-container w3-flat-belize-hole">
                             <h2 class="fontSourceSansPro w3-text-white">Lodge a complaint</h2>
                         </header>
                         <div class="w3-container fontSourceSansPro">
                             <form id="lodgeForm" name="lodgeForm" method="post" action="/userLodge">
                                 <input id="tenant_id" name="tenant_id" value="" style="display:none;">
-                                <div class="w3-row w3-section">
-                                    <div class="w3-col m2 s4"><i class="w3-xxlarge fa fa-list-ul"></i></div>
-                                    <div class="w3-rest">
-                                        <select class="w3-select fontSourceSansPro" style="background-color: white;"
-                                            name="type" id="type" required>
-                                            <option value="" disabled selected>Choose your complaint type</option>
-                                            <option>apartment</option>
-                                            <option>personnel</option>
-                                        </select>
-                                    </div>
-                                </div>
+                            
                                 <div class="w3-row w3-section">
                                     <div class="w3-col m2 s4"><i class="w3-xxlarge fa fa-lightbulb-o"></i></div>
                                     <div class="w3-rest">
-                                        <select class="w3-select fontSourceSansPro" style="background-color: white;"
-                                            id="equipment" name="subject" required>
-                                            <option value="" disabled selected>Choose Equipment</option>
-                                        </select>
+                                        <label for="repair">Choose what you want to repair: </label>
+                                        <select class="w3-select  fontSourceSansPro" style="background-color: white;"
+                                        id="slot" name="time_slot" required>
+                                        <!-- AM -->
+                                        <option>Door</option>
+                                        <option>Door Knob</option>
+                                        <option>Light</option>
+                                        <option>Faucet</option>
+                                        <option>Aircon Repair</option>
+                                        <option>Septic System Repair</option>
+                                        <option>Roof Repair</option>
+                                        <option>Patchy Lawn Repair</option>
+                                        <option>Cabinet Repair</option>
+                                        <option>Circiut Breaker</option>
+                                        <option>Leaking of Water</option>
+                                    </select>
+                                    <br>
+                                    <br>
+                                    <label for="">Others: &nbsp;</label><input type="text" class="form-control w-50">
                                     </div>
                                 </div>
                                 <div class="w3-row w3-section">
                                     <div class="w3-col m2 s4"><i class="w3-xxlarge fa fa-user-o"></i></div>
                                     <div class="w3-rest">
-                                        <input class="w3-input fontSourceSansPro" id="assistance"
-                                            style="background-color:transparent;" value="None" readonly name="category"
-                                            required>
+                                        <select class="w3-select  fontSourceSansPro" style="background-color: white;"
+                                        id="slot" name="time_slot" required>
+                                        <!-- AM -->
+                                        <option>Electricican</option>
+                                        <option>Carpenter</option>
+                                        <option>Plumber</option>
+                                    </select>
                                     </div>
                                 </div>
                                 <div class="w3-row w3-section">
@@ -90,8 +99,11 @@
                                             <option>Replace</option>
                                             <option>Bolt and Latch</option>
                                             <option>Electric Fault</option>
-                                            <option>Others</option>
+                                            <!-- <option>Others</option> -->
                                         </select>
+                                        <br>
+                                        <br>
+                                        <label for="">Others: &nbsp;</label><input type="text" class="form-control w-50">
                                     </div>
                                 </div>
                                 <div class="w3-row w3-section">
@@ -103,8 +115,8 @@
                                 </div>
                                 <div class="w3-center ">
                                     <input type="submit" id="submitLodge"
-                                        class="w3-button w3-flat-belize-hole w3-hover-blue" style="margin-top:2em;"
-                                        value="Lodge">
+                                        class="btn btn-primary w3-hover-darkblue mb-5" style="margin-top:2em;"
+                                        value="Submit Complaint" style="float: right; padding: 10px;">
                                 </div>
                             </form>
                         </div>

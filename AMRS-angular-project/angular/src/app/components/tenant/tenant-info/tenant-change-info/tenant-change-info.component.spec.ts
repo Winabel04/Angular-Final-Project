@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AdminHistoryComponent } from './admin-history.component';
+import { TenantChangeInfoComponent } from './tenant-change-info.component';
 
-describe('AdminHistoryComponent', () => {
-  let component: AdminHistoryComponent;
-  let fixture: ComponentFixture<AdminHistoryComponent>;
+describe('TenantChangeInfoComponent', () => {
+  let component: TenantChangeInfoComponent;
+  let fixture: ComponentFixture<TenantChangeInfoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AdminHistoryComponent ]
+      declarations: [ TenantChangeInfoComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AdminHistoryComponent);
+    fixture = TestBed.createComponent(TenantChangeInfoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

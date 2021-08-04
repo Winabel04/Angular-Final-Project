@@ -1,83 +1,142 @@
 <!-- <p>watch works!</p> -->
 <app-admin-side-bar></app-admin-side-bar>
 
-<!-- <div class="w3-flat-clouds w3-display-container" style="margin-left:20%;height:80vh;max-height:80vh;overflow-y: scroll;"
-    id="watchDiv" name="commonDivName">
-    <div class="w3-center" style="width:90%;margin:0 auto;">
-        <header class="w3-container w3-flat-belize-hole" style="width:100%;">
-            <h2 class="fontSourceSansPro w3-text-white">Watch</h2>
-        </header>
-    </div>
-    <div style="width:90%;margin:0 auto;">
-        <div class="fontSourceSansPro w3-margin-top">
-            <div class="w3-center">
-                <header class="w3-container w3-tag w3-center w3-flat-belize-hole w3-margin-top">
-                    <h5 class="fontSourceSansPro w3-center w3-text-white">Electrician</h5>
-                </header>
-            </div>
-            <div id="watchDivElectrician" class="w3-margin-top">
-
-            </div>
-
-            <div class="w3-center">
-                <header class="w3-container w3-tag w3-center w3-flat-belize-hole">
-                    <h5 class="fontSourceSansPro w3-center w3-text-white">Carpenter</h5>
-                </header>
-            </div>
-            <div id="watchDivCarpenter" class="w3-margin-top">
-
-            </div>
-
-            <div class="w3-center">
-                <header class="w3-container w3-tag w3-center w3-flat-belize-hole">
-                    <h5 class="fontSourceSansPro w3-center w3-text-white">Others</h5>
-                </header>
-            </div>
-            <div id="watchDivOthers" class="w3-margin-top">
-
-            </div>
-        </div>
-    </div>
-</div> -->
 
 <div class="w3-clouds w3-display-container divNisya" style="margin-left:5.7%;height:80vh;" id="infoDiv" name="commonDivName">
     <div class="w3-display-middle" style="width:70%;">
         <div class="w3-white" style="box-shadow: 0px 1px 2px 2px black;">
             <header class="w3-container w3-flat-belize-hole">
-                <h2 class="fontSourceSansPro w3-text-white">Change Info <span id="userName"></span>
-                    <span id="changePass">
-                        <h6 style="display:inline;"><button
-                                class="w3-btn w3-right w3-hover-blue w3-border-white w3-border" id="changeInfo"
-                                 routerLink="/adminInfo">X</button></h6>
-                    </span>
-                </h2>
+                <h2 class="fontSourceSansPro w3-text-white">Watch<span id="userName"></span></h2>
             </header>
             <br>
             <div class="w3-container w3-padding-16 w3-center">
-                <div class=" w3-container" style="margin:5px auto;width:50%;">
-                    <label for="">Old Password: </label>
-                    <input class="w3-input w3-border fontSourceSansPro" id="old_pass" type="password" val=""
-                        placeholder="Old Password" style="margin:5px;">
-                    
-                    <label for="">New Password: </label>
-                    <input class="w3-input w3-border fontSourceSansPro" id="new_pass" type="password" value=""
-                        placeholder="New Password" style="margin:5px;">
-                    
-                    <label for="">Re-Enter Password: </label>
-                    <input class="w3-input w3-border fontSourceSansPro" id="new_re_pass" type="password" val=""
-                        placeholder="Re-Enter New Password" style="margin:5px;">
-                    <label for=""></label>
-                    <!-- <input class="w3-button w3-hover-blue w3-flat-belize-hole" id="changeInfoButton" type="button"
-                        value="Change Password" style="margin:5px;"> -->
-                </div>
+                <label for="electrician" style="float: left; padding: 5px; font-size: 25px;">Electrician</label>
+                <table id="table" class="table table-borderedless table-striped">
+                    <thead>
+                        <tr>
+                            <!-- <th>Number</th> -->
+                            <!-- <th>Work</th> -->
+                            <th>Name</th>
+                            <th>Phone Number</th>
+                            <th>Email</th>
+                            <th>Status</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <?php
+                            $attendance_qry = $conn->query("SELECT a.*,concat(e.firstname,' ',e.middlename,' ',e.lastname) as name, e.employee_no FROM `attendance` a inner join employee e on a.employee_no = e.employee_no ");
+                            while($row = $attendance_qry->fetch_array()){
+                                
+                        ?>	 -->
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <!-- <?php 
+                                if($row['log_type'] ==1){
+                                    $log = "TIME IN";
+                                }elseif($row['log_type'] ==2){
+                                    $log = "TIME OUT";
+                                }
+                            
+                                ?> -->
+                            <td></td>
+                            <td></td>
+                            <!-- <td><input type="checkbox" name="assign" id="assign" class=""></td> -->
+                        </tr>
+                        <!-- <?php
+                            }
+                        ?>	 -->
+                    </tbody>
+                </table>
+                
             </div>
+
             <div class="w3-container w3-padding-16 w3-center">
-                <div class=" w3-container" style="margin:5px auto;width:50%;">
-                    <label for="">Phone Number: </label> <input class="w3-input w3-border fontSourceSansPro" id="new_phone_no" type="number" val=""
-                        placeholder="Phone_no" style="margin:5px;">
-                    
-                </div>
-                <button class = "btn btn-primary" style="float: right; padding: 8px;">Save Changes</button>
+                <label for="carpenter" style="float: left; padding: 5px; font-size: 25px;">Carpenter</label>
+                <table id="table" class="table table-borderedless table-striped">
+                    <thead>
+                        <tr>
+                            <!-- <th>Number</th> -->
+                            <!-- <th>Work</th> -->
+                            <th>Name</th>
+                            <th>Phone Number</th>
+                            <th>Email</th>
+                            <th>Status</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <?php
+                            $attendance_qry = $conn->query("SELECT a.*,concat(e.firstname,' ',e.middlename,' ',e.lastname) as name, e.employee_no FROM `attendance` a inner join employee e on a.employee_no = e.employee_no ");
+                            while($row = $attendance_qry->fetch_array()){
+                                
+                        ?>	 -->
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <!-- <?php 
+                                if($row['log_type'] ==1){
+                                    $log = "TIME IN";
+                                }elseif($row['log_type'] ==2){
+                                    $log = "TIME OUT";
+                                }
+                            
+                                ?> -->
+                            <td></td>
+                            <td></td>
+                            <!-- <td><input type="checkbox" name="assign" id="assign" class=""></td> -->
+                        </tr>
+                        <!-- <?php
+                            }
+                        ?>	 -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="w3-container w3-padding-16 w3-center">
+                <label for="plumber" style="float: left; padding: 5px; font-size: 25px;">Plumber</label>
+                <table id="table" class="table table-borderedless table-striped">
+                    <thead>
+                        <tr>
+                            <!-- <th>Number</th> -->
+                            
+                            <th>Name</th>
+                            <th>Phone Number</th>
+                            <th>Email</th>
+                            <th>Status</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <?php
+                            $attendance_qry = $conn->query("SELECT a.*,concat(e.firstname,' ',e.middlename,' ',e.lastname) as name, e.employee_no FROM `attendance` a inner join employee e on a.employee_no = e.employee_no ");
+                            while($row = $attendance_qry->fetch_array()){
+                                
+                        ?>	 -->
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <!-- <?php 
+                                if($row['log_type'] ==1){
+                                    $log = "TIME IN";
+                                }elseif($row['log_type'] ==2){
+                                    $log = "TIME OUT";
+                                }
+                            
+                                ?> -->
+                            <td></td>
+                            <td></td>
+                            <!-- <td><input type="checkbox" name="assign" id="assign" class=""></td> -->
+                        </tr>
+                        <!-- <?php
+                            }
+                        ?>	 -->
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

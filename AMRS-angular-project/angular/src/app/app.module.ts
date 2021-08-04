@@ -16,12 +16,13 @@ import { HandyManHistoryComponent } from './components/handy-man/handy-man-histo
 import { LodgeComponent } from './components/tenant/lodge/lodge.component';
 import { TenantInfoComponent } from './components/tenant/tenant-info/tenant-info.component';
 import { TenantHistoryComponent } from './components/tenant/tenant-history/tenant-history.component';
-import { AdminHistoryComponent } from './components/admin/admin-history/admin-history.component';
 import { AdminInfoComponent } from './components/admin/admin-info/admin-info.component';
 import { AdminSideBarComponent } from './components/admin/admin-side-bar/admin-side-bar.component';
 import { TenantSideBarComponent } from './components/tenant/tenant-side-bar/tenant-side-bar.component';
 import { HandyManSideNavComponent } from './../app/components/handy-man/handy-man-side-nav/handy-man-side-nav.component';
 import { AdminChangeInfoComponent } from './components/admin/admin-info/admin-change-info/admin-change-info.component';
+import { TenantChangeInfoComponent } from './components/tenant/tenant-info/tenant-change-info/tenant-change-info.component';
+import { HandyManChangeInfoComponent } from './components/handy-man/handy-man-info/handy-man-change-info/handy-man-change-info.component';
 
 
 
@@ -41,12 +42,13 @@ import { AdminChangeInfoComponent } from './components/admin/admin-info/admin-ch
     LodgeComponent,
     TenantInfoComponent,
     TenantHistoryComponent,
-    AdminHistoryComponent,
     AdminInfoComponent,
     AdminSideBarComponent,
     TenantSideBarComponent,
     HandyManSideNavComponent,
     AdminChangeInfoComponent,
+    TenantChangeInfoComponent,
+    HandyManChangeInfoComponent,
   ],
   imports: [
     BrowserModule,
