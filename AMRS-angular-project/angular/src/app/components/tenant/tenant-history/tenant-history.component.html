@@ -1,0 +1,27 @@
+<!-- <p>tenant-history works!</p> -->
+
+<div class="w3-flat-clouds w3-display-container" style="margin-left:20%;height:80vh;max-height:80vh;overflow-y: scroll;"
+    id="historyDiv" name="commonDivName">
+    <div class="w3-center" style="width:80%;margin:0 auto;">
+        <header class="w3-container w3-flat-belize-hole">
+            <h2 class="fontSourceSansPro w3-text-white">History
+                <span>
+                    <h2 style="display:inline;">
+                        <select class="fontSourceSansPro" style="background-color: #2980BB;color:white;border:0px"
+                            name="type" id="historySelectType"
+                            onchange="document.getElementById('historyButton').click();">
+                            <option value="-1">All</option>
+                            <option value="0">Lodged</option>
+                            <option value="1">Progress</option>
+                            <option value="2">Solved</option>
+                            <option value="3">Closed</option>
+                        </select>
+                    </h2>
+                </span>
+            </h2>
+        </header>
+    </div>
+    <div id="historyDivChild" style="width:80%;margin:0 auto;">
+
+    </div>
+</div>
