@@ -11,6 +11,7 @@ import { HandyManInfoComponent } from './components/handy-man/handy-man-info/han
 import { WorkComponent } from './components/handy-man/work/work.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 import { LodgeComponent } from './components/tenant/lodge/lodge.component';
 import { TenantHistoryComponent } from './components/tenant/tenant-history/tenant-history.component';
 import { TenantChangeInfoComponent } from './components/tenant/tenant-info/tenant-change-info/tenant-change-info.component';
@@ -22,6 +23,8 @@ const routes: Routes = [
     { path: 'landingPage', component: LandingPageComponent, pathMatch: 'full' },
     { path: 'login', component: LoginComponent, pathMatch: 'full' },
     { path: 'logout', component: LandingPageComponent, pathMatch: 'full' },
+    { path: 'register', component: RegisterComponent, pathMatch: 'full' },
+
 
     // for admin routing
     { path: 'assign', component: AssignComponent, pathMatch: 'full' },

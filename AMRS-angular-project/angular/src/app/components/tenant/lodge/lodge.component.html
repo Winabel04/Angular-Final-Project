@@ -17,76 +17,91 @@
                             <h2 class="fontSourceSansPro w3-text-white">Lodge a complaint</h2>
                         </header>
                         <div class="w3-container fontSourceSansPro">
-                            <form id="lodgeForm" name="lodgeForm" method="post" action="/userLodge">
-                                <input id="tenant_id" name="tenant_id" value="" style="display:none;">
-                            
+                            <form #lodge="ngForm" (ngSubmit)="submitComplaint(lodge)">
+
+                                <!-- <input id="tenant_id" name="user_id" value="12" style="display:none;"> -->
+
+
+
+                                <div class="w3-row w3-section">
+                                    <div class="w3-col m2 s4"><i class="w3-xxlarge fa fa-home"></i></div>
+                                    <div class="w3-rest">
+                                        <select class="w3-select  fontSourceSansPro" style="background-color: white;"
+                                            id="slot" name="room_number" ngModel required>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <br>
+
                                 <div class="w3-row w3-section">
                                     <div class="w3-col m2 s4"><i class="w3-xxlarge fa fa-lightbulb-o"></i></div>
                                     <div class="w3-rest">
                                         <label for="repair">Choose what you want to repair: </label>
                                         <select class="w3-select  fontSourceSansPro" style="background-color: white;"
-                                        id="slot" name="time_slot" required>
-                                        <!-- AM -->
-                                        <option>Door</option>
-                                        <option>Door Knob</option>
-                                        <option>Light</option>
-                                        <option>Faucet</option>
-                                        <option>Aircon Repair</option>
-                                        <option>Septic System Repair</option>
-                                        <option>Roof Repair</option>
-                                        <option>Patchy Lawn Repair</option>
-                                        <option>Cabinet Repair</option>
-                                        <option>Circiut Breaker</option>
-                                        <option>Leaking of Water</option>
-                                    </select>
-                                    <br>
-                                    <br>
-                                    <label for="">Others: &nbsp;</label><input type="text" class="form-control w-50">
+                                            id="slot" name="problem" ngModel required>
+                                            <!-- AM -->
+                                            <option value="Door">Door</option>
+                                            <option value="Door Knob">Door Knob</option>
+                                            <option value="Light">Light</option>
+                                            <option value="Faucet">Faucet</option>
+                                            <option value="Aircon Repair">Aircon Repair</option>
+                                            <option value="Septic System Repair">Septic System Repair</option>
+                                            <option value="Roof Repair">Roof Repair</option>
+                                            <option value="Patchy Lawn Repair">Patchy Lawn Repair</option>
+                                            <option value="Cabinet Repair">Cabinet Repair</option>
+                                            <option value="Circiut Breaker">Circiut Breaker</option>
+                                            <option value="Leaking of Water">Leaking of Water</option>
+                                        </select>
+                                        <br>
+                                        <br>
+                                        <label for="">Others: &nbsp;</label><input type="text"
+                                            class="form-control w-50">
                                     </div>
                                 </div>
                                 <div class="w3-row w3-section">
                                     <div class="w3-col m2 s4"><i class="w3-xxlarge fa fa-user-o"></i></div>
                                     <div class="w3-rest">
                                         <select class="w3-select  fontSourceSansPro" style="background-color: white;"
-                                        id="slot" name="time_slot" required>
-                                        <!-- AM -->
-                                        <option>Electricican</option>
-                                        <option>Carpenter</option>
-                                        <option>Plumber</option>
-                                    </select>
+                                            id="slot" name="handyman" placeholder="HandyMan" ngModel required>
+                                            <option [value]="handyman.name" *ngFor='let handyman of handymans'>{{handyman.name}}</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="w3-row w3-section">
                                     <div class="w3-col m2 s4"><i class="w3-xxlarge fa fa-clock-o"></i></div>
                                     <div class="w3-rest">
                                         <select class="w3-select  fontSourceSansPro" style="background-color: white;"
-                                            id="slot" name="time_slot" required>
+                                            id="slot" name="time" ngModel required>
                                             <!-- AM -->
-                                            <option>1:00-2:00AM</option>
-                                            <option>2:00-3:00AM</option>
-                                            <option>3:00-4:00AM</option>
-                                            <option>4:00-5:00AM</option>
-                                            <option>5:00-6:00AM</option>
-                                            <option>6:00-7:00AM</option>
-                                            <option>7:00-8:00AM</option>
-                                            <option>8:00-9:00AM</option>
-                                            <option>9:00-10:00AM</option>
-                                            <option>10:00-11:00AM</option>
-                                            <option>11:00-12:00AM</option>
+                                            <option value="7:00-8:00AM">7:00-8:00AM</option>
+                                            <option value="8:00-9:00AM">8:00-9:00AM</option>
+                                            <option value="9:00-10:00AM">9:00-10:00AM</option>
+                                            <option value="10:00-11:00AM">10:00-11:00AM</option>
+                                            <option value="11:00-12:00AM">11:00-12:00AM</option>
                                             <!-- PM -->
-                                            <option>12:00-1:00PM</option>
-                                            <option>1:00-2:00PM</option>
-                                            <option>2:00-3:00PM</option>
-                                            <option>3:00-4:00PM</option>
-                                            <option>4:00-5:00PM</option>
-                                            <option>5:00-6:00PM</option>
-                                            <option>6:00-7:00PM</option>
-                                            <option>7:00-8:00PM</option>
-                                            <option>8:00-9:00PM</option>
-                                            <option>9:00-10:00PM</option>
-                                            <option>10:00-11:00PM</option>
-                                            <option>11:00-12:00PM</option>
-                                            <option>12:00-1:00AM</option>
+                                            <option value="12:00-1:00PM">12:00-1:00PM</option>
+                                            <option value="1:00-2:00PM">1:00-2:00PM</option>
+                                            <option value="2:00-3:00PM">2:00-3:00PM</option>
+                                            <option value="3:00-4:00PM">3:00-4:00PM</option>
+                                            <option value="4:00-5:00PM">4:00-5:00PM</option>
+                                            <option value="5:00-6:00PM">5:00-6:00PM</option>
+                                            <option value="6:00-7:00PM">6:00-7:00PM</option>
+                                            <option value="7:00-8:00PM">7:00-8:00PM</option>
                                         </select>
                                     </div>
                                 </div>
@@ -94,29 +109,30 @@
                                     <div class="w3-col m2 s4"><i class="w3-xxlarge fa fa-pencil"></i></div>
                                     <div class="w3-rest">
                                         <select class="w3-select  fontSourceSansPro" style="background-color: white;"
-                                            id="assistance" name="description" required>
-                                            <option>Broken</option>
-                                            <option>Replace</option>
-                                            <option>Bolt and Latch</option>
-                                            <option>Electric Fault</option>
+                                            id="assistance" name="description" required ngModel>
+                                            <option value="Broken">Broken</option>
+                                            <option value="Replace">Replace</option>
+                                            <option value="Bolt and Latch">Bolt and Latch</option>
+                                            <option value="Electric Fault">Electric Fault</option>
                                             <!-- <option>Others</option> -->
                                         </select>
                                         <br>
                                         <br>
-                                        <label for="">Others: &nbsp;</label><input type="text" class="form-control w-50">
+                                        <label for="">Others: &nbsp;</label><input type="text" name="description"
+                                            class="form-control w-50">
                                     </div>
                                 </div>
-                                <div class="w3-row w3-section">
+                                <!-- <div class="w3-row w3-section">
                                     <div class="w3-col m2 s4"><i class="w3-xxlarge fa fa-commenting-o"></i></div>
                                     <div class="w3-rest">
                                         <textarea class="w3-input fontSourceSansPro" name="descriptionFull"
-                                            placeholder="Tell us more about the problem"></textarea>
+                                            placeholder="Tell us more about the problem" ngModel></textarea>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="w3-center ">
-                                    <input type="submit" id="submitLodge"
-                                        class="btn btn-primary w3-hover-darkblue mb-5" style="margin-top:2em;"
-                                        value="Submit Complaint" style="float: right; padding: 10px;">
+                                    <input type="submit" id="submitLodge" class="btn btn-primary w3-hover-darkblue mb-5"
+                                        style="margin-top:2em;" value="Submit Complaint"
+                                        style="float: right; padding: 10px;">
                                 </div>
                             </form>
                         </div>

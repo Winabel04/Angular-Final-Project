@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TenantInfoComponent implements OnInit {
 
+    credential: any;
+    tenantInfo: any
   constructor() { }
 
   ngOnInit(): void {
+      this.credential = window.localStorage.getItem('credential')
+      this.tenantInfo = JSON.parse(this.credential)
+      console.log(JSON.parse(this.credential))
   }
+
 
 }

@@ -1,0 +1,22 @@
+<!-- <p>register works!</p> -->
+
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <label for="">Name</label>
+    <input type="text" name="name" id="" ngModel>
+    <label for="">Email</label>
+    <input type="text" name="email" id="" ngModel>
+    <label for="">Password</label>
+    <input type="text" name="password" id="" ngModel>
+    <label for="">User Type: </label>
+    <select name="userType" id="" ngModel>
+        <option value="admin">Admin</option>
+        <option value="tenant">Tenant</option>
+        <option value="handyman">HandyMan</option>  
+    </select>
+    <label for="">Room No.</label>
+    <input type="text" name="roomNumber" id="" ngModel>
+    <label for="">Phone No.</label>
+    <input type="text" name="phoneNumber" id="" ngModel>
+    <button type="submit">Submit</button>
+    
+</form>

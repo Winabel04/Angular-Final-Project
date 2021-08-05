@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-admin-info',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminInfoComponent implements OnInit {
 
+    credential: any;
+    adminInfo: any
   constructor() { }
 
   ngOnInit(): void {
+      this.credential = window.localStorage.getItem('credential')
+      this.adminInfo = JSON.parse(this.credential)
+      console.log(JSON.parse(this.credential))
   }
 
 }

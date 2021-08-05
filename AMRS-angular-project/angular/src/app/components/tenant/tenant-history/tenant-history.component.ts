@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from 'src/app/services/http.service';
 
 @Component({
   selector: 'app-tenant-history',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TenantHistoryComponent implements OnInit {
 
-  constructor() { }
+    // tenant
+    credential: any;
+    complaints: any
+  constructor(
+      private httpService: HttpService
+  ) { }
 
   ngOnInit(): void {
+    this.credential = window.localStorage.getItem('credential')
+    const adminInfo = JSON.parse(this.credential)
+    this.httpService.getComplaintsHistory(adminInfo.id).subscribe(response => {
+        this.complaints = response;
+    })
   }
 
 }

@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +25,7 @@ import { HandyManSideNavComponent } from './../app/components/handy-man/handy-ma
 import { AdminChangeInfoComponent } from './components/admin/admin-info/admin-change-info/admin-change-info.component';
 import { TenantChangeInfoComponent } from './components/tenant/tenant-info/tenant-change-info/tenant-change-info.component';
 import { HandyManChangeInfoComponent } from './components/handy-man/handy-man-info/handy-man-change-info/handy-man-change-info.component';
+import { RegisterComponent } from './components/register/register.component';
 
 
 
@@ -49,10 +52,13 @@ import { HandyManChangeInfoComponent } from './components/handy-man/handy-man-in
     AdminChangeInfoComponent,
     TenantChangeInfoComponent,
     HandyManChangeInfoComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

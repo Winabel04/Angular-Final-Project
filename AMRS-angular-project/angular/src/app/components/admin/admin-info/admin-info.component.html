@@ -6,7 +6,7 @@
     <div class="w3-display-middle" style="width:70%;">
         <div class="w3-white" style="box-shadow: 0px 2px 3px 3px black; ">
             <header class="w3-container w3-flat-belize-hole">
-                <h2 class="fontSourceSansPro w3-text-white">Welcome <span id="userName"></span>
+                <h2 class="fontSourceSansPro w3-text-white">Welcome <span id="userName" class="ml-4">{{ adminInfo.name }}</span>
                     <span id="changePass">
                         <h6 style="display:inline;"><button
                                 class="w3-btn w3-right w3-hover-blue w3-border-white w3-border" id="changeInfo"
@@ -17,17 +17,15 @@
             <br>
             <div class="w3-container fontSourceSansPro">
                 <input id="admin_id" name="admin_id" value="" style="display:none;">
-                <h2><span class="fa fa-user-o w3-col m2 s4"></span></h2>
+                <h2><span class="fa fa-user-o w3-col m2 s4"></span></h2><h3>{{adminInfo.userType}}</h3>
                 <br>
-                <h3><span id="actype" class="w3-rest"></span></h3>
+              
+                <h2><span class="fa fa-envelope-o w3-col m2 s4"></span></h2><h3>{{adminInfo.email}}</h3>
                 <br>
-                <h2><span class="fa fa-envelope-o w3-col m2 s4"></span></h2>
+              
+                <h2><span class="fa fa-phone w3-col m2 s4"></span></h2><h3>{{adminInfo.phoneNumber}}</h3>
                 <br>
-                <h3><span id="email" class="w3-rest"></span></h3>
-                <br>
-                <h2><span class="fa fa-phone w3-col m2 s4"></span></h2>
-                <br>
-                <h3><span id="mobile" class="w3-rest"></span></h3>
+               
             </div>
         </div>
         <br>

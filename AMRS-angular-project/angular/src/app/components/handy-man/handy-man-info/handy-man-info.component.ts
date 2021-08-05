@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HandyManInfoComponent implements OnInit {
 
+    credential: any;
+    handymanInfo: any;
   constructor() { }
 
   ngOnInit(): void {
+      this.credential = window.localStorage.getItem('credential')
+      this.handymanInfo = JSON.parse(this.credential)
+      console.log(JSON.parse(this.credential))
   }
-
 }
