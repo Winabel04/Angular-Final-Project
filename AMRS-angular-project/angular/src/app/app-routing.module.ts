@@ -17,37 +17,38 @@ import { TenantHistoryComponent } from './components/tenant/tenant-history/tenan
 import { TenantChangeInfoComponent } from './components/tenant/tenant-info/tenant-change-info/tenant-change-info.component';
 import { TenantInfoComponent } from './components/tenant/tenant-info/tenant-info.component';
 import { TenantComponent } from './components/tenant/tenant.component';
+import { RouteService } from './services/route.service';
+
+
+const credential = window.localStorage.getItem('credential')
 
 const routes: Routes = [
 
     { path: 'landingPage', component: LandingPageComponent, pathMatch: 'full' },
     { path: 'login', component: LoginComponent, pathMatch: 'full' },
-    { path: 'logout', component: LandingPageComponent, pathMatch: 'full' },
     { path: 'register', component: RegisterComponent, pathMatch: 'full' },
 
 
     // for admin routing
-    { path: 'assign', component: AssignComponent, pathMatch: 'full' },
-    { path: 'watch', component: WatchComponent, pathMatch: 'full' },
-    { path: 'adminInfo', component: AdminInfoComponent, pathMatch: 'full' },
-    { path: 'adminChangeInfo', component: AdminChangeInfoComponent, pathMatch: 'full' },
+    { path: 'assign', component: AssignComponent, pathMatch: 'full',  canActivate: [RouteService], data: {role: 'admin'}},
+    { path: 'watch', component: WatchComponent, pathMatch: 'full',  canActivate: [RouteService], data: {role: 'admin'}},
+    { path: 'adminInfo', component: AdminInfoComponent, pathMatch: 'full',  canActivate: [RouteService], data: {role: 'admin'} },
+    { path: 'adminChangeInfo', component: AdminChangeInfoComponent, pathMatch: 'full',  canActivate: [RouteService], data: {role: 'admin'} },
    
 
     // for tenant routing
-    { path: 'lodge', component: LodgeComponent, pathMatch: 'full' },
-    { path: 'tenantInfo', component: TenantInfoComponent, pathMatch: 'full' },
-    { path: 'tenantHistory', component: TenantHistoryComponent, pathMatch: 'full' },
-    { path: 'tenantChangeInfo', component: TenantChangeInfoComponent, pathMatch: 'full' },
+    { path: 'lodge', component: LodgeComponent, pathMatch: 'full',  canActivate: [RouteService], data: {role: 'tenant'} },
+    { path: 'tenantInfo', component: TenantInfoComponent, pathMatch: 'full',  canActivate: [RouteService], data: {role: 'tenant'} },
+    { path: 'tenantHistory', component: TenantHistoryComponent, pathMatch: 'full',  canActivate: [RouteService], data: {role: 'tenant'} },
+    { path: 'tenantChangeInfo', component: TenantChangeInfoComponent, pathMatch: 'full',  canActivate: [RouteService], data: {role: 'tenant'} },
 
     // for handyman routing
-    { path: 'work', component: WorkComponent, pathMatch: 'full' },
-    { path: 'handymanInfo', component: HandyManInfoComponent, pathMatch: 'full' },
-    { path: 'handymanHistory', component: HandyManHistoryComponent, pathMatch: 'full' },
-    { path: 'handymanChangeInfo', component: HandyManChangeInfoComponent, pathMatch: 'full' },
+    { path: 'work', component: WorkComponent, pathMatch: 'full',  canActivate: [RouteService], data: {role: 'handyman'} },
+    { path: 'handymanInfo', component: HandyManInfoComponent, pathMatch: 'full',  canActivate: [RouteService], data: {role: 'handyman'} },
+    { path: 'handymanHistory', component: HandyManHistoryComponent, pathMatch: 'full',  canActivate: [RouteService], data: {role: 'handyman'} },
+    { path: 'handymanChangeInfo', component: HandyManChangeInfoComponent, pathMatch: 'full',  canActivate: [RouteService], data: {role: 'handyman'} },
 
-
-
-
+    {path: '', redirectTo: 'landingPage', pathMatch: 'full'}
 ];
 
 @NgModule({

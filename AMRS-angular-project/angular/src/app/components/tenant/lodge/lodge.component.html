@@ -26,8 +26,9 @@
                                 <div class="w3-row w3-section">
                                     <div class="w3-col m2 s4"><i class="w3-xxlarge fa fa-home"></i></div>
                                     <div class="w3-rest">
-                                        <select class="w3-select  fontSourceSansPro" style="background-color: white;"
+                                        <select class="w3-select fontSourceSansPro" style="background-color: white;"
                                             id="slot" name="room_number" ngModel required>
+                                            <option value="" disabled selected hidden>Please select Room no.</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -51,10 +52,11 @@
                                 <div class="w3-row w3-section">
                                     <div class="w3-col m2 s4"><i class="w3-xxlarge fa fa-lightbulb-o"></i></div>
                                     <div class="w3-rest">
-                                        <label for="repair">Choose what you want to repair: </label>
-                                        <select class="w3-select  fontSourceSansPro" style="background-color: white;"
+                                       
+                                        <select class="w3-select  fontSourceSansPro" placeholder="" style="background-color: white;"
                                             id="slot" name="problem" ngModel required>
                                             <!-- AM -->
+                                            <option value="" disabled selected hidden>Choose what you want to repair:</option>
                                             <option value="Door">Door</option>
                                             <option value="Door Knob">Door Knob</option>
                                             <option value="Light">Light</option>
@@ -69,7 +71,7 @@
                                         </select>
                                         <br>
                                         <br>
-                                        <label for="">Others: &nbsp;</label><input type="text"
+                                        <label for="">Others: &nbsp;</label><input type="text"  placeholder="None of the choices above"
                                             class="form-control w-50">
                                     </div>
                                 </div>
@@ -78,6 +80,7 @@
                                     <div class="w3-rest">
                                         <select class="w3-select  fontSourceSansPro" style="background-color: white;"
                                             id="slot" name="handyman" placeholder="HandyMan" ngModel required>
+                                            <option value="" disabled selected hidden>Choose Name of Handy Man</option>
                                             <option [value]="handyman.name" *ngFor='let handyman of handymans'>{{handyman.name}}</option>
                                         </select>
                                     </div>
@@ -88,6 +91,7 @@
                                         <select class="w3-select  fontSourceSansPro" style="background-color: white;"
                                             id="slot" name="time" ngModel required>
                                             <!-- AM -->
+                                            <option value="" disabled selected hidden>Choose the Time Schedule</option>
                                             <option value="7:00-8:00AM">7:00-8:00AM</option>
                                             <option value="8:00-9:00AM">8:00-9:00AM</option>
                                             <option value="9:00-10:00AM">9:00-10:00AM</option>
@@ -110,6 +114,7 @@
                                     <div class="w3-rest">
                                         <select class="w3-select  fontSourceSansPro" style="background-color: white;"
                                             id="assistance" name="description" required ngModel>
+                                            <option value="" disabled selected hidden>What do you want to address..</option>
                                             <option value="Broken">Broken</option>
                                             <option value="Replace">Replace</option>
                                             <option value="Bolt and Latch">Bolt and Latch</option>
@@ -118,7 +123,7 @@
                                         </select>
                                         <br>
                                         <br>
-                                        <label for="">Others: &nbsp;</label><input type="text" name="description"
+                                        <label for="">Others: &nbsp;</label><input type="text"  placeholder="None of the choices mentioned" name="description"
                                             class="form-control w-50">
                                     </div>
                                 </div>

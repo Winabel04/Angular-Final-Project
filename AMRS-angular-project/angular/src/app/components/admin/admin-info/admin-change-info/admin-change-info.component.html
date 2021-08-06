@@ -19,32 +19,34 @@
             <form #updateChanges="ngForm" (ngSubmit)="update(updateChanges)">
                 <div class="w3-container w3-padding-16 w3-center">
                     <div class=" w3-container" style="margin:5px auto;width:50%;">
+
                         <label for="old_pass">Old Password: </label>
                         <input class="w3-input w3-border fontSourceSansPro" id="old_pass_id" required type="password"
-                            name="old_pass" placeholder="Old Password" style="margin:5px;" ngModel>
+                            val="" name="old_pass" placeholder="Old Password" style="margin:5px;" ngModel>
 
-                        <label for="new_pass_id">New Password: </label>
+                        <label for="new_pass">New Password: </label>
                         <input class="w3-input w3-border fontSourceSansPro" id="new_pass_id" required type="password"
-                            name="new_pass" value="" placeholder="New Password" style="margin:5px;" [(ngModel)]="newpass">
+                            name="new_pass" value="" placeholder="New Password" style="margin:5px;"
+                            [(ngModel)]="newpass">
 
                         <label for="new_re_pass">Re-Enter Password: </label>
                         <input class="w3-input w3-border fontSourceSansPro" id="new_re_pass_id" required type="password"
-                            name="new_re_pass" val="" placeholder="Re-Enter New Password" style="margin:5px;" [(ngModel)]="retype">
-                        <label for=""></label>
-                        <small class="text-danger" *ngIf="newpass !== retype" >Did not match!</small>
-                        <!-- <input class="w3-button w3-hover-blue w3-flat-belize-hole" id="changeInfoButton" type="button"
-                            value="Change Password" style="margin:5px;"> -->
+                            name="new_re_pass" val="" placeholder="Re-Enter New Password" style="margin:5px;"
+                            [(ngModel)]="retype">
+
+                        <small class="text-danger" *ngIf="newpass !== retype">Did not match!</small>
+
                     </div>
                 </div>
                 <div class="w3-container w3-padding-16 w3-center">
                     <div class=" w3-container" style="margin:5px auto;width:50%;">
-                        <label for="phone">Phone Number: </label> 
-                        <input class="w3-input w3-border fontSourceSansPro" required
-                            id="new_phone_no_id" type="number" name="phone" placeholder="Phone_no"
-                            style="margin:5px;" [(ngModel)]="phone">
+                        <label for="phone">Phone Number: </label>
+                        <input class="w3-input w3-border fontSourceSansPro" required id="new_phone_no_id" type="number"
+                            name="phone" placeholder="Phone_no" style="margin:5px;" [(ngModel)]="phone">
 
                     </div>
-                    <button class="btn btn-primary" type="submit" style="float: right; padding: 8px;" [disabled]="updateChanges.invalid || newpass !== retype" >Save Changes</button>
+                    <button class="btn btn-primary" type="submit" style="float: right; padding: 8px;"
+                        [disabled]="updateChanges.invalid || newpass !== retype">Save Changes</button>
                 </div>
             </form>
 

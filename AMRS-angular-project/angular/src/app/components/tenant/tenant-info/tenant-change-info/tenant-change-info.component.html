@@ -17,32 +17,37 @@
                 </h2>
             </header>
             <br>
-            <div class="w3-container w3-padding-16 w3-center">
-                <div class=" w3-container" style="margin:5px auto;width:50%;">
-                    <label for="">Old Password: </label>
-                    <input class="w3-input w3-border fontSourceSansPro" id="old_pass" type="password" val=""
-                        placeholder="Old Password" style="margin:5px;">
-                    
-                    <label for="">New Password: </label>
-                    <input class="w3-input w3-border fontSourceSansPro" id="new_pass" type="password" value=""
-                        placeholder="New Password" style="margin:5px;">
-                    
-                    <label for="">Re-Enter Password: </label>
-                    <input class="w3-input w3-border fontSourceSansPro" id="new_re_pass" type="password" val=""
-                        placeholder="Re-Enter New Password" style="margin:5px;">
-                    <label for=""></label>
-                    <!-- <input class="w3-button w3-hover-blue w3-flat-belize-hole" id="changeInfoButton" type="button"
-                        value="Change Password" style="margin:5px;"> -->
+            <form #updateChanges="ngForm" (ngSubmit)="update(updateChanges)">
+                <div class="w3-container w3-padding-16 w3-center">
+                    <div class=" w3-container" style="margin:5px auto;width:50%;">
+                        <label for="old_pass">Old Password: </label>
+                        <input class="w3-input w3-border fontSourceSansPro" id="old_pass_id" required name="old_pass" type="password" val=""
+                            placeholder="Old Password" style="margin:5px;" ngModel>
+                        
+                        <label for="new_pass">New Password: </label>
+                        <input class="w3-input w3-border fontSourceSansPro" id="new_pass_id" required name = "new_pass" type="password" value=""
+                            placeholder="New Password" style="margin:5px;" [(ngModel)]="newpass">
+                        
+                        <label for="new_re_pass">Re-Enter Password: </label>
+                        <input class="w3-input w3-border fontSourceSansPro" id="new_re_pass_id" type="password" required name="new_re_pass"
+                            placeholder="Re-Enter New Password" style="margin:5px;" [(ngModel)]="retype">
+                        
+                        <label for=""></label>
+                        <small class="text-danger" *ngIf="newpass !== retype" >Did not match!</small>
+                    </div>
                 </div>
-            </div>
-            <div class="w3-container w3-padding-16 w3-center">
-                <div class=" w3-container" style="margin:5px auto;width:50%;">
-                    <label for="">Phone Number: </label> <input class="w3-input w3-border fontSourceSansPro" id="new_phone_no" type="number" val=""
-                        placeholder="Phone_no" style="margin:5px;">
-                    
+                <div class="w3-container w3-padding-16 w3-center">
+                    <div class=" w3-container" style="margin:5px auto;width:50%;">
+                        <label for="phone">Phone Number: </label> 
+                        <input class="w3-input w3-border fontSourceSansPro" 
+                        id="new_phone_no_id" type="number" val="" name="phone"
+                            placeholder="Phone_no" style="margin:5px;" [(ngModel)]="phone">
+                        
+                    </div>
+                    <button class="btn btn-primary" type="submit" style="float: right; padding: 8px;" [disabled]="updateChanges.invalid || newpass !== retype" >Save Changes</button>
                 </div>
-                <button class = "btn btn-primary" style="float: right; padding: 8px;">Save Changes</button>
-            </div>
+            </form>
+            
         </div>
     </div>
 </div>

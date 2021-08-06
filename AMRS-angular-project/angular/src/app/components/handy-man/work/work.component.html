@@ -2,193 +2,43 @@
 
 <app-handy-man-side-nav></app-handy-man-side-nav>
 
-<!-- <div class="w3-flat-clouds w3-display-container" style="margin-left:20%;min-height:80vh;overflow-y: scroll;"
-    id="workDiv" name="commonDivName">
-    <div style="width:90%;margin:0 auto;" class="w3-center">
-        <header class="w3-container w3-flat-belize-hole">
-            <h2 class="fontSourceSansPro w3-center w3-text-white">Today's Work</h2>
-        </header>
-    </div>
-    <div style="width:90%;margin:0 auto;">
-        <div class="fontSourceSansPro w3-margin-top">
-            <div class="w3-center">
-                <header class="w3-container w3-tag w3-center w3-flat-belize-hole w3-margin-top">
-                    <h5 class="fontSourceSansPro w3-center w3-text-white">10:00-12:00</h5>
-                </header>
-            </div>
-            <div id="workDivChildSlot1" class="w3-margin-top">
-
-            </div>
-
-            <div class="w3-center">
-                <header class="w3-container w3-tag w3-center w3-flat-belize-hole">
-                    <h5 class="fontSourceSansPro w3-center w3-text-white">13:00-15:00</h5>
-                </header>
-            </div>
-            <div id="workDivChildSlot2" class="w3-margin-top">
-
-            </div>
-
-            <div class="w3-center">
-                <header class="w3-container w3-tag w3-center w3-flat-belize-hole">
-                    <h5 class="fontSourceSansPro w3-center w3-text-white">16:00-18:00</h5>
-                </header>
-            </div>
-            <div id="workDivChildSlot3" class="w3-margin-top">
-
-            </div>
-        </div>
-    </div>
-    <div id="id01" class="w3-modal w3-card-4" style="background-color: rgba(0,0,0,0);">
-        <div class="w3-modal-content w3-center w3-animate-right" style="background-color: rgba(0,0,0,0);">
-
-            <div class="w3-container w3-padding-16 w3-bar" style="background-color: rgba(0,0,0,0.5);">
-                <input style="display:none;" id="otp_id" name="otp_id" value="0">
-                <div class="w3-bar-item"><input class="w3-input" id="otp_value" name="otp_value" type="number"></div>
-                <div class="w3-bar-item"><button class="w3-button w3-right w3-hover-green w3-flat-emerald"
-                        id="otpSolved" type="submit">Submit</button></div>
-            </div>
-        </div>
-    </div>
-</div> -->
-
-
-
-
-<div class="w3-clouds w3-display-container divNisya" style="margin-left:5.7%;height:80vh;" id="infoDiv" name="commonDivName">
+<div class="w3-clouds w3-display-container divNisya" style="margin-left:5.8%;height:80vh;" id="infoDiv"
+    name="commonDivName">
     <div class="w3-display-middle" style="width:70%;">
         <div class="w3-white" style="box-shadow: 0px 1px 2px 2px black;">
             <header class="w3-container w3-flat-belize-hole">
                 <h2 class="fontSourceSansPro w3-text-white">Work<span id="userName"></span></h2>
             </header>
             <br>
-            <div class="w3-container w3-padding-16 w3-center">
-                <label for="electrician" style="float: left; padding: 5px; font-size: 25px;">Working Hours & Days   </label>
-                <table id="table" class="table table-borderedless table-striped">
-                    <thead>
-                        <tr>
-                            <!-- <th>Number</th> -->
-                            <!-- <th>Work</th> -->
-                            <th>Days</th>
-                            <th>AM</th>
-                            <th>PM</th>
-                           
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- <?php
-                            $attendance_qry = $conn->query("SELECT a.*,concat(e.firstname,' ',e.middlename,' ',e.lastname) as name, e.employee_no FROM `attendance` a inner join employee e on a.employee_no = e.employee_no ");
-                            while($row = $attendance_qry->fetch_array()){
-                                
-                        ?>	 -->
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            
-                            <!-- <?php 
-                                if($row['log_type'] ==1){
-                                    $log = "TIME IN";
-                                }elseif($row['log_type'] ==2){
-                                    $log = "TIME OUT";
-                                }
-                            
-                                ?> -->
-                           
-                            
-                            <!-- <td><input type="checkbox" name="assign" id="assign" class=""></td> -->
-                        </tr>
-                        <!-- <?php
-                            }
-                        ?>	 -->
-                    </tbody>
-                </table>
-                
-            </div>
 
-            <div class="w3-container w3-padding-16 w3-center">
-                <label for="carpenter" style="float: left; padding: 5px; font-size: 25px;">Non-Working Days</label>
-                <table id="table" class="table table-borderedless table-striped">
-                    <thead>
-                        <tr>
-                            <!-- <th>Number</th> -->
-                            <!-- <th>Work</th> -->
-                            <th>Days</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- <?php
-                            $attendance_qry = $conn->query("SELECT a.*,concat(e.firstname,' ',e.middlename,' ',e.lastname) as name, e.employee_no FROM `attendance` a inner join employee e on a.employee_no = e.employee_no ");
-                            while($row = $attendance_qry->fetch_array()){
-                                
-                        ?>	 -->
-                        <tr>
-                            <td></td>
-                           
-                            <!-- <?php 
-                                if($row['log_type'] ==1){
-                                    $log = "TIME IN";
-                                }elseif($row['log_type'] ==2){
-                                    $log = "TIME OUT";
-                                }
-                            
-                                ?> -->
-                            
-                            <!-- <td><input type="checkbox" name="assign" id="assign" class=""></td> -->
-                        </tr>
-                        <!-- <?php
-                            }
-                        ?>	 -->
-                    </tbody>
-                </table>
-            </div>
+            <form>
+                <div class="w3-container w3-padding-16 w3-center">
+                    <table id="table" class="table table-borderedless table-striped">
+                        <thead>
+                            <tr>
 
-            <div class="w3-container w3-padding-16 w3-center">
-                <label for="plumber" style="float: left; padding: 5px; font-size: 25px;">Non-Working Hours</label>
-                <table id="table" class="table table-borderedless table-striped">
-                    <thead>
-                        <tr>
-                            <!-- <th>Number</th> -->
-                            
-                            <th>AM</th>
-                            <th>PM</th>
-                            
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- <?php
-                            $attendance_qry = $conn->query("SELECT a.*,concat(e.firstname,' ',e.middlename,' ',e.lastname) as name, e.employee_no FROM `attendance` a inner join employee e on a.employee_no = e.employee_no ");
-                            while($row = $attendance_qry->fetch_array()){
-                                
-                        ?>	 -->
-                        <tr>
-                           
-                            <!-- <?php 
-                                if($row['log_type'] ==1){
-                                    $log = "TIME IN";
-                                }elseif($row['log_type'] ==2){
-                                    $log = "TIME OUT";
-                                }
-                            
-                                ?> -->
-                            <td></td>
-                            <td></td>
-                            <!-- <td><input type="checkbox" name="assign" id="assign" class=""></td> -->
-                        </tr>
-                        <!-- <?php
-                            }
-                        ?>	 -->
-                    </tbody>
-                </table>
-            </div>
+                                <th>Room No.</th>
+                                <th>Problem</th>
+                                <th>Tenants Phone Number</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let work of works">
+                                <td>{{work.user.roomNumber}}</td>
+                                <td>{{work.problem}}</td>
+                                <td>{{work.user.phoneNumber}}</td>
+                                <td>{{work.status}}</td>
+                                <td><input type="checkbox" class="" name="ids"  #check (change)="addId(work.id, check.checked)" ngModel></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button class="btn btn-primary" id="updateStatus_id" name="updateStatus"
+                        style="float: right; padding: 8px;" (click)="updateStatus()" [disabled]="lisofIds.length == 0" >Update Status</button>
+                </div>
+            </form>
         </div>
+
     </div>
 </div>
 
-
-
-<!-- 
-<div class="radio custom-control-inline ml-2 p-2">
-    <label><input type="radio" name="optradio">&nbsp;Completed</label>
-    <label><input type="radio" name="optradio" class="ml-5">&nbsp;Pending</label>
-</div> -->

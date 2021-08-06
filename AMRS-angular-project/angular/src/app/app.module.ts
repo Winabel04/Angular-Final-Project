@@ -26,6 +26,7 @@ import { AdminChangeInfoComponent } from './components/admin/admin-info/admin-ch
 import { TenantChangeInfoComponent } from './components/tenant/tenant-info/tenant-change-info/tenant-change-info.component';
 import { HandyManChangeInfoComponent } from './components/handy-man/handy-man-info/handy-man-change-info/handy-man-change-info.component';
 import { RegisterComponent } from './components/register/register.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
@@ -53,6 +54,7 @@ import { RegisterComponent } from './components/register/register.component';
     TenantChangeInfoComponent,
     HandyManChangeInfoComponent,
     RegisterComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

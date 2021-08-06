@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { HttpService } from 'src/app/services/http.service';
 
@@ -8,6 +8,7 @@ import { HttpService } from 'src/app/services/http.service';
   styleUrls: ['./admin-change-info.component.css']
 })
 export class AdminChangeInfoComponent implements OnInit {
+    
     phone: number = 0;
     credential: any
     retype!: string
@@ -33,9 +34,7 @@ export class AdminChangeInfoComponent implements OnInit {
         alert(error.error.errors)
         form.reset()
     })
-    // this.deviceDetails.emit(form.value);
-//     form.value.id = this.deviceService.getNewId();
-//     this.deviceService.addDevice(form.value);
+
 //     this.router.navigate(['/list']);
   }
 

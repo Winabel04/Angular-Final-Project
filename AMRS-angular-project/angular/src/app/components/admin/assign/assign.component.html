@@ -1,7 +1,7 @@
 <!-- <p>assign works!</p> -->
 
 <app-admin-side-bar></app-admin-side-bar>
-<div class="w3-clouds w3-display-container divNisya" style="margin-left:5.7%;height:80vh;" id="infoDiv"
+<div class="w3-clouds w3-display-container divNisya" style="margin-left:5.8%;height:80vh;" id="infoDiv"
     name="commonDivName">
     <div class="w3-display-middle" style="width:70%;">
         <div class="w3-white" style="box-shadow: 0px 1px 2px 2px black;">
@@ -9,33 +9,36 @@
                 <h2 class="fontSourceSansPro w3-text-white">Notification/Assign<span id="userName"></span></h2>
             </header>
             <br>
-            <div class="w3-container w3-padding-16 w3-center">
-                <table id="table" class="table table-borderedless table-striped">
-                    <thead>
-                        <tr>
-                            
-                            <th>Name</th>
-                            <th>Problem</th>
-                            <th>Phone Number</th>
-                            <th>Email</th>
-                            <th>Time</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let assignee of assignes">
-                            <td>{{assignee.handyman}}</td>
-                            <td>{{assignee.problem}}</td>
-                            <td>{{assignee.phoneNumber}}</td>
-                            <td>{{assignee.email}}</td>
-                            <td>{{assignee.time}}</td>
-                            <td><input type="checkbox" name="assign" id="assign" class=""></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <button class = "btn btn-primary" id="generate" name="generate" style="float: right; padding: 8px;">Generate</button>
-            </div>
+            <form>
+                <div class="w3-container w3-padding-16 w3-center">
+                    <table id="table" class="table table-borderedless table-striped">
+                        <thead>
+                            <tr>
 
+                                <th>Name</th>
+                                <th>Problem</th>
+                                <th>Phone Number</th>
+                                <th>Email</th>
+                                <th>Time</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let assignee of assignes">
+                                <td>{{assignee.handyman}}</td>
+                                <td>{{assignee.problem}}</td>
+                                <td>{{assignee.phoneNumber}}</td>
+                                <td>{{assignee.email}}</td>
+                                <td>{{assignee.time}}</td>
+                                <td><input type="checkbox" name="assigneeId" #check (change)="addId(assignee.id, check.checked)" id="assign" class="" ngModel>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button class="btn btn-primary" (click)="generate()" [disabled]="isGenerating" id="generate" name="generate"
+                        style="float: right; padding: 8px;">{{isGenerating ? 'Generating...' : 'Generate'}}</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>

@@ -1,22 +1,130 @@
 <!-- <p>register works!</p> -->
 
-<form #f="ngForm" (ngSubmit)="onSubmit(f)">
-    <label for="">Name</label>
-    <input type="text" name="name" id="" ngModel>
-    <label for="">Email</label>
-    <input type="text" name="email" id="" ngModel>
-    <label for="">Password</label>
-    <input type="text" name="password" id="" ngModel>
-    <label for="">User Type: </label>
-    <select name="userType" id="" ngModel>
-        <option value="admin">Admin</option>
-        <option value="tenant">Tenant</option>
-        <option value="handyman">HandyMan</option>  
-    </select>
-    <label for="">Room No.</label>
-    <input type="text" name="roomNumber" id="" ngModel>
-    <label for="">Phone No.</label>
-    <input type="text" name="phoneNumber" id="" ngModel>
-    <button type="submit">Submit</button>
-    
-</form>
+
+<div class="container-fluid px-1 px-md- px-lg-1 px-xl-5 py-5 mx-auto mt-3">
+    <div class="card card0 border-8 ">
+        <div class="row d-flex">
+            <div class="col-lg-6">
+                <div class="card1 pb-5">
+                    <div class="row ml-5 mt-3">
+                        <h3>𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝘁𝗼 ... <br>
+                            𝗔𝗽𝗮𝗿𝘁𝗺𝗲𝗻𝘁 𝗠𝗮𝗶𝗻𝘁𝗲𝗻𝗮𝗻𝗰𝗲 𝗥𝗲𝗴𝗶𝘀𝘁𝗲𝗿 𝗦𝘆𝘀𝘁𝗲𝗺</h3>
+                        <ul class="fa fa-pencil" style="font-size:20px"> 𝘙𝘦𝘨𝘪𝘴𝘵𝘦𝘳 𝘺𝘰𝘶𝘳
+                            𝘊𝘰𝘮𝘱𝘭𝘢𝘪𝘯𝘵</ul>
+                        <ul class="fa fa-crosshairs" style="font-size:20px"> 𝘛𝘳𝘢𝘤𝘬 𝘺𝘰𝘶𝘳 𝘊𝘰𝘮𝘱𝘭𝘢𝘪𝘯𝘵
+                        </ul>
+                        <ul class="fa fa-gears" style="font-size:20px"> 𝘎𝘦𝘵 𝘪𝘵 𝘚𝘰𝘭𝘷𝘦𝘥</ul>
+                        <ul class="fa fa-thumbs-up" style="font-size:20px"> 𝘎𝘪𝘷𝘦 𝘍𝘦𝘦𝘥𝘉𝘢𝘤𝘬</ul>
+                    </div>
+                    <div class="row px-3 justify-content-center border-line"> <img
+                            src="https://image.freepik.com/free-vector/login-concept-illustration_114360-757.jpg"
+                            class="image">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card2 card border-0 px-4 py-5">
+                    <div class="row mb-4 px-3">
+                        <h6 class="mb-0 mr-4 mt-2">Sign in with</h6>
+                        <div class="facebook text-center mr-3 ">
+                            <div class="fa fa-facebook"></div>
+                        </div>
+                        <div class="twitter text-center mr-3">
+                            <div class="fa fa-twitter"></div>
+                        </div>
+                        <div class="linkedin text-center mr-3">
+                            <div class="fa fa-linkedin"></div>
+                        </div>
+                    </div>
+
+                    <div class="row px-3 mb-4">
+                        <div class="line"></div> <small class="or text-center">Or</small>
+                        <div class="line"></div>
+                    </div>
+                    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+
+                        <div class="form-group col-md-11">
+                            <label for="">Name</label>
+                            <input type="text" class="form-control" placeholder="Enter your Name" name="name" id=""
+                                ngModel>
+                        </div>
+                        <div class="form-group col-md-11">
+                            <label for="">Email</label>
+                            <input type="email" class="form-control" placeholder="Enter your Email Address" name="email" required
+                                id="" ngModel>
+                        </div>
+                        <div class="form-group col-md-11">
+                            <label for="">Password</label>
+                            <input type="password" class="form-control" placeholder="Password" name="password" id=""
+                                ngModel>
+                        </div>
+
+                        <div class="form-row col-md-11">
+                            <div class="form-group col-md-5">
+                                <label for="">Phone No.</label>
+                                <input type="number" class="form-control" name="phoneNumber" id="" ngModel>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="">User Type: </label>
+                                <select class="form-control" id="" 
+                               name="userType" [(ngModel)]="userType">
+                                    <option selected >Select...</option>
+                                    <option value="admin">Admin</option>
+                                    <option value="tenant">Tenant</option>
+                                    <option value="handyman">HandyMan</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-3">
+                               
+                                <label for="">Room No.</label>
+                                <select class="form-control" [disabled]="userType !== 'tenant'" name="roomNumber" id="" [(ngModel)]="roomNumber">
+                                    <option selected value="0" *ngIf="userType !== 'tenant'">N/A</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="form-row col-md-8 mt-3">
+                            <div class="col-md-6 ">
+                                <button type="submit"
+                                    class="btn btn-primary btn-lg btn-block text-light">Submit
+                                </button>
+                            </div>
+                            <div class="col-md-6 mt-2 ">
+                                <small class="font-weight-bold">Don't have an account? <a
+                                        class="text-info" routerLink = "/login">Login</a>
+                                </small>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="bg-blue py-4">
+        <div class="row px-3"> <small class="ml-4 ml-sm-5 mb-2">Copyright &copy; 2021. All rights
+                reserved.</small>
+            <div class="social-contact ml-4 ml-sm-auto"> <span class="fa fa-facebook mr-4 text-sm"></span> <span
+                    class="fa fa-google-plus mr-4 text-sm"></span> <span class="fa fa-linkedin mr-4 text-sm"></span>
+                <span class="fa fa-twitter mr-4 mr-sm-5 text-sm"></span> 
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

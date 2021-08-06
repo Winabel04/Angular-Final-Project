@@ -1,4 +1,5 @@
 <!-- <p>watch works!</p> -->
+
 <app-admin-side-bar></app-admin-side-bar>
 
 
@@ -10,7 +11,7 @@
             </header>
             <br>
             <div class="w3-container w3-padding-16 w3-center">
-                <label for="electrician" style="float: left; padding: 5px; font-size: 25px;">Pending Works</label>
+                <label for="electrician" style="float: left; padding: 5px; font-size: 25px;">In Progress Works</label>
                 <table id="table" class="table table-borderedless table-striped">
                     <thead>
                         <tr>
@@ -24,12 +25,12 @@
                     </thead>
                     <tbody>
                         
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                        <tr *ngFor="let approved of allApproved">
+                            <td>{{approved.handyman}}</td>
+                            <td>{{approved.phoneNumber}}</td>
+                            <td>{{approved.email}}</td>
+                            <td>{{approved.status}}</td>
+                            <td>{{approved.time}}</td>
                            
                         </tr>
                        
@@ -40,3 +41,4 @@
         </div>
     </div>
 </div>
+

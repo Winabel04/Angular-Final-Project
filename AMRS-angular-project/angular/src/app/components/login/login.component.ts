@@ -18,6 +18,8 @@ export class LoginComponent implements OnInit {
 
   } 
 
+
+  //for getting the data that are inputed by the users and if that user choose a userType of admin it will go to the home of the admin and so on and so forth
   userKind:any;
   login(f:NgForm){
       console.log("My data", f.value);
@@ -42,7 +44,7 @@ export class LoginComponent implements OnInit {
         }
         
       }, error => {
-          console.error(error)
+         alert(error.error.Message)
       });
   
   }
